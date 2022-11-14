@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Snake Den Loop",
+        "distance": 1.7,
+        "hours": 0,
+        "minutes": 34,
+        "difficulty": "Easy",
+        "image": "images/snakeden.jpeg"
+    },
+    {
+        "name": "Lincoln Woods Trail",
+        "distance": 3.1,
+        "hours": 1,
+        "minutes": 12,
+        "difficulty": "Easy",
+        "image": "images/lincolnwoods.jpeg"
+    },
+    {
+        "name": "Colt State Park Loop",
+        "distance": 5.3,
+        "hours": 1,
+        "minutes": 38,
+        "difficulty": "Easy",
+        "image": "images/coltstatepark.jpeg"
+    },
+    {
+        "name": "The Beehive Loop Trail",
+        "distance": 1.5,
+        "hours": 0,
+        "minutes": 58,
+        "difficulty": "Hard",
+        "image": "images/beehiveloop.jpeg"
+    },
+    {
+        "name": "Mt. Monadnock White Dot Trail",
+        "distance": 3.6,
+        "hours": 2,
+        "minutes": 53,
+        "difficulty": "Hard",
+        "image": "images/whitedot.jpeg"
+    },
+    {
+        "name": "Charley's Loop Trail",
+        "distance": 1.7,
+        "hours": 0,
+        "minutes": 41,
+        "difficulty": "Medium",
+        "image": "images/charleysloop.jpeg"
+    },
+    {
+        "name": "Chasm Loop Trail",
+        "distance": 1.4,
+        "hours": 0,
+        "minutes": 31,
+        "difficulty": "Easy",
+        "image": "images/chasmloop.jpeg"
+    },
+    {
+        "name": "Blue Hills Skyline Trail",
+        "distance": 15.2,
+        "hours": 8,
+        "minutes": 4,
+        "difficulty": "Hard",
+        "image": "images/bluehills.jpeg"
+    },
+    {
+        "name": "Ponkapoag Pond Trail",
+        "distance": 6.7,
+        "hours": 2,
+        "minutes": 12,
+        "difficulty": "Easy",
+        "image": "images/ponkapoagpond.jpeg"
+    },
+    {
+        "name": "Cliff Walk",
+        "distance": 7,
+        "hours": 2,
+        "minutes": 16,
+        "difficulty": "Medium",
+        "image": "images/cliffwalk.jpeg"
+    },
+    {
+        "name": "Bash Bish Falls Trail",
+        "distance": 2.1,
+        "hours": 1,
+        "minutes": 8,
+        "difficulty": "Medium",
+        "image": "images/bashbish.jpeg"
+    }
+]

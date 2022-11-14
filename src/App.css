@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  padding: 0.5rem 1rem;
 }
 
 .App-logo {
@@ -35,4 +35,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.ant-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.ant-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ant-checkbox-wrapper, .ant-radio-wrapper {
+  font-size: larger;
+}
+
+.menu {
+  margin: 16px 0 0 0.5em;
 }
