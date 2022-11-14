@@ -1,8 +1,10 @@
 import './App.css';
+import Aggregator from "./components/Aggregator.js";
 import { useState } from "react";
 import hikeData from "./assets/hike-data.json";
 import FilteredList from "./FilteredList.js";
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import { Checkbox, Col, Row, Radio, Space } from 'antd';
 
 hikeData.forEach((item) => {
@@ -16,7 +18,7 @@ const timeOptions = ['<1hr', '1hr-2hr', '2hr+'];
 function App() {
   const [difficulty, setDifficulty] = useState("All");
   const [time, setTime] = useState("All");
-  const [favorite, setFavorite] = useState(false);
+  const [added, setAdded] = useState(false);
   const [sortBy, setSortBy] = useState("None");
 
   let hikeTracker = {};
@@ -63,8 +65,12 @@ function App() {
     }
   };
 
-  const onSelectFavorite = (event) => {
-    setFavorite(event.target.checked);
+  const onSelectAdded = (event) => {
+    if (event.currentTarget.value === "All") {
+      setAdded(false);
+    } else {
+      setAdded(true);
+    }
   }
 
   const onSort = (event) => {
@@ -90,13 +96,11 @@ function App() {
           <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Time</Typography>
           <Checkbox.Group options={timeOptions} onChange={onSelectTime} />
           <br />
-          <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Other</Typography>
-          <Checkbox onChange={onSelectFavorite}>Completed</Checkbox>
-          <br /><br />
-          <Typography variant="subtitle1" sx={{ color: '#5f5f5f' }}>Distance Hiked: {hikeList.distance}mi</Typography>
+          {added ? <Button variant="outlined" color="secondary" value="All" onClick={onSelectAdded} sx={{width: '180px'}}>Back To All Hikes</Button> :
+          <Button variant="contained" color="secondary" value="Added" onClick={onSelectAdded} sx={{width: '180px'}}>Completed Hikes</Button>}
         </Col>
         <Col flex="auto">
-          <FilteredList list={hikeData} difficulty={difficulty} time={time} favorite={favorite} sortBy={sortBy} updateHikes={updateHikes} addTracker={hikeList.hikes} />
+          {added ? <Aggregator list={hikeData} hikeTracker={hikeList} updateHikes={updateHikes}></Aggregator> : <FilteredList list={hikeData} difficulty={difficulty} time={time} sortBy={sortBy} updateHikes={updateHikes} addTracker={hikeList.hikes} />}
         </Col>
       </Row>
     </div>

@@ -16,7 +16,7 @@ export default function FilteredList(props) {
         return (condition === difficulty);
     };
 
-    const difficultyAndTime = item => {
+    const matchesFilters = item => {
         if (props.difficulty === "All" && props.time === "All") {
             return true
         } else if (props.difficulty !== "All") {
@@ -35,19 +35,19 @@ export default function FilteredList(props) {
         }
     }
 
-    const matchesFilters = item => {
-        // all items should be shown when no filter is selected
-        // example: filter = ["Easy", "<1hr"]
-        if (props.favorite) {
-            if (props.addTracker[item.name].added === 1) {
-                return difficultyAndTime(item);
-            } else {
-                return false
-            }
-        } else {
-            return difficultyAndTime(item);
-        }
-    }
+    // const matchesFilters = item => {
+    //     // all items should be shown when no filter is selected
+    //     // example: filter = ["Easy", "<1hr"]
+    //     if (props.added) {
+    //         if (props.addTracker[item.name].added === 1) {
+    //             return difficultyAndTime(item);
+    //         } else {
+    //             return false
+    //         }
+    //     } else {
+    //         return difficultyAndTime(item);
+    //     }
+    // }
 
     const sortByDistance = (a,b) => {
         if (a.distance < b.distance) {
