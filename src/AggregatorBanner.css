@@ -18,16 +18,8 @@
   align-items: center;
 }
 
-
 .MuiPaper-root {
   margin-top: 3px;
   margin-bottom: 3px;
   margin-right: 10px;
 }
-
-/* .hike-list {
-  display: flex;
-  flex-direction: row wrap;
-  width: calc(100vw - 330px);
-  overflow-x: scroll;
-} */

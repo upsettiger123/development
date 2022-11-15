@@ -76,23 +76,25 @@ function App() {
     <div className="App">
       <Typography variant="h2">New England To-Hike List</Typography>
       <Row>
-        <Col flex="225px" className="menu">
-          <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Sort By</Typography>
-          <Radio.Group>
-            <Space direction="vertical" onChange={onSort}>
-              <Radio value={"Distance"}>Distance</Radio>
-              <Radio value={"None"}>No Sort</Radio>
-            </Space>
-          </Radio.Group>
-          <br />
-          <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Difficulty</Typography>
-          <Checkbox.Group options={diffOptions} onChange={onSelectDifficulty} />
-          <br />
-          <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Time</Typography>
-          <Checkbox.Group options={timeOptions} onChange={onSelectTime} />
-          <br />
-          <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Other</Typography>
-          <Checkbox onChange={onSelectAdded}>Completed</Checkbox>
+        <Col flex="225px">
+          <div className="menu">
+            <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Sort By</Typography>
+            <Radio.Group>
+              <Space direction="vertical" onChange={onSort}>
+                <Radio value={"Distance"}>Distance</Radio>
+                <Radio value={"None"}>No Sort</Radio>
+              </Space>
+            </Radio.Group>
+            <br />
+            <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Difficulty</Typography>
+            <Checkbox.Group options={diffOptions} onChange={onSelectDifficulty} />
+            <br />
+            <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Time</Typography>
+            <Checkbox.Group options={timeOptions} onChange={onSelectTime} />
+            <br />
+            <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Other</Typography>
+            <Checkbox onChange={onSelectAdded}>Completed</Checkbox>
+          </div>
         </Col>
         <Col flex="auto">
           <AggregatorBanner list={hikeData} hikeTracker={hikeList} updateHikes={updateHikes}></AggregatorBanner>
