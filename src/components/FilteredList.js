@@ -1,4 +1,4 @@
-import HikeTile from "./components/HikeTile";
+import HikeTile from "./HikeTile";
 
 export default function FilteredList(props) {
     
@@ -16,7 +16,7 @@ export default function FilteredList(props) {
         return (condition === difficulty);
     };
 
-    const matchesFilters = item => {
+    const difficultyAndTime = item => {
         if (props.difficulty === "All" && props.time === "All") {
             return true
         } else if (props.difficulty !== "All") {
@@ -32,6 +32,20 @@ export default function FilteredList(props) {
             return filterOnTime(props.time, item.hours);
         } else {
             return false
+        }
+    }
+
+    const matchesFilters = item => {
+        // all items should be shown when no filter is selected
+        // example: filter = ["Easy", "<1hr"]
+        if (props.added) {
+            if (props.addTracker[item.name].added === 1) {
+                return difficultyAndTime(item);
+            } else {
+                return false
+            }
+        } else {
+            return difficultyAndTime(item);
         }
     }
 

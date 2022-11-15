@@ -2,7 +2,6 @@ import Typography from '@mui/material/Typography';
 import HikeTile from './HikeTile.js';
 
 export default function Aggregator(props) {
-    console.log(props.hikeTracker)
     const filterAdded = (hike) => {
         if (props.hikeTracker.hikes[hike.name].added) {
             return true;
