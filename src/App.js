@@ -97,7 +97,7 @@ function App() {
           </div>
         </Col>
         <Col flex="auto">
-          <AggregatorBanner list={hikeData} hikeTracker={hikeList} updateHikes={updateHikes}></AggregatorBanner>
+          <AggregatorBanner list={hikeData} hikeTracker={hikeList}></AggregatorBanner>
           <FilteredList list={hikeData} difficulty={difficulty} added={added} time={time} sortBy={sortBy} updateHikes={updateHikes} addTracker={hikeList.hikes} />
         </Col>
       </Row>
