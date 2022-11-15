@@ -96,8 +96,8 @@ function App() {
           <Typography variant="h6" sx={{ color: '#5f5f5f' }}>Time</Typography>
           <Checkbox.Group options={timeOptions} onChange={onSelectTime} />
           <br />
-          {added ? <Button variant="outlined" color="secondary" value="All" onClick={onSelectAdded} sx={{width: '180px'}}>Back To All Hikes</Button> :
-          <Button variant="contained" color="secondary" value="Added" onClick={onSelectAdded} sx={{width: '180px'}}>Completed Hikes</Button>}
+          {added ? <Button variant="outlined" size="small" color="secondary" value="All" onClick={onSelectAdded} sx={{width: '150px'}}>Back To All Hikes</Button> :
+          <Button variant="contained" size="small" color="secondary" value="Added" onClick={onSelectAdded} sx={{width: '150px'}}>See Completed Hikes</Button>}
         </Col>
         <Col flex="auto">
           {added ? <Aggregator list={hikeData} hikeTracker={hikeList} updateHikes={updateHikes}></Aggregator> : <FilteredList list={hikeData} difficulty={difficulty} time={time} sortBy={sortBy} updateHikes={updateHikes} addTracker={hikeList.hikes} />}
